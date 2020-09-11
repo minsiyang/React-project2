@@ -22,9 +22,6 @@ class NoteList extends Component {
   }
 
   render(){
-    const notes = this.state.notes.map((note, index) => {
-      return <li key={index}>{note}</li>
-    })
     return (
       <div className="NoteList">
         <form>
@@ -33,7 +30,9 @@ class NoteList extends Component {
           </label>
           <input type="submit" value="Submit" onClick={this.handleSubmit} />
         </form>
-        <ul>{notes}</ul>
+        <ul>{this.state.notes.map((note, index) => {
+          return <li key={index}>{note}</li>
+        })}</ul>
       </div>
     )
   }

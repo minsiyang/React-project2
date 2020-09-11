@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import { hot } from "react-hot-loader";
 import './App.css';
+import NoteList from './NoteList';
 
 class App extends Component {
   render() {
@@ -8,6 +9,7 @@ class App extends Component {
       <div className="App">
         <h1>Yo, React!</h1>
         <h2>Here we go~~</h2>
+        <NoteList />
       </div>
     )
   }
